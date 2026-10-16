@@ -1,0 +1,25 @@
+# Заметки
+notes*
+
+# Виртуальные окружения
+.venv/
+venv/
+env/
+
+# Кэш Python
+__pycache__/
+*.py[cod]
+
+# Кэш тестов и инструментов
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Покрытие тестами
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+# Метаданные пакетов
+*.egg-info/
