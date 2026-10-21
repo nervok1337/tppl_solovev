@@ -8,5 +8,6 @@
 
 ```bash
 .venv/bin/python postfix_notation/main.py "3 0 4 ~ 2 ~"
+.venv/bin/python postfix_notation/main.py 3 0 4 ~ 2 ~
 ```
 
