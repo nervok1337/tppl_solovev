@@ -1,5 +1,15 @@
 import sys
 import operator
+from pathlib import Path
+
+def parse_args(args):
+    home_dir = str(Path.home())
+    for i,e in enumerate(args):
+        if home_dir == e:
+            args[i] = "~"
+
+    expression = " ".join(args)
+    return expression
 
 def eval_expr(raw_expression):
     stack = []
@@ -60,11 +70,16 @@ operations = {
 
 
 if __name__ == "__main__":
-    args = sys.argv
-    if len(args) != 2:
-        print("Ошибка аргумента: неверно переданный аргумент, программа ожидает выражение")
+    args = sys.argv[1:]
+    if not args:
+        print("Ошибка: выражение не передано, передайте выражение через пробел или строкой")
         sys.exit(1)
+    args = parse_args(args)
 
-    result = eval_expr(args[1])
-    print(f"{sys.argv[1]} = {result}")
+    # if len(args) != 2:
+    #     print("Ошибка аргумента: неверно переданный аргумент, программа ожидает выражение")
+    #     sys.exit(1)
+
+    result = eval_expr(args)
+    print(f"{args} = {result}")
 
