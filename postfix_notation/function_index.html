@@ -3,9 +3,1138 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Coverage report</title>
-    <link rel="icon" sizes="32x32" href="favicon_32_cb_c827f16f.png">
-    <link rel="stylesheet" href="style_cb_4667309f.css" type="text/css">
-    <script src="coverage_html_cb_15cffcd0.js" defer></script>
+    <link rel="icon" sizes="32x32" href="data:image/png;base64,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">
+    <style>@charset "UTF-8";
+/* Licensed under the Apache License: http://www.apache.org/licenses/LICENSE-2.0 */
+/* For details: https://github.com/coveragepy/coveragepy/blob/main/NOTICE.txt */
+/* Don't edit this .css file. Edit the .scss file instead! */
+html, body, h1, h2, h3, p, table, td, th { margin: 0; padding: 0; border: 0; font-weight: inherit; font-style: inherit; font-size: 100%; font-family: inherit; vertical-align: baseline; }
+
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; font-size: 1em; background: #fff; color: #000; }
+
+@media (prefers-color-scheme: dark) { body { background: #1e1e1e; } }
+
+@media (prefers-color-scheme: dark) { body { color: #eee; } }
+
+html > body { font-size: 16px; }
+
+a:active, a:focus { outline: 2px dashed #007acc; }
+
+p { font-size: .875em; line-height: 1.4em; }
+
+table { border-collapse: collapse; }
+
+td { vertical-align: top; }
+
+table tr.hidden { display: none !important; }
+
+p#no_rows { display: none; font-size: 1.15em; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; }
+
+a.nav { text-decoration: none; color: inherit; }
+
+a.nav:hover { text-decoration: underline; color: inherit; }
+
+.hidden { display: none; }
+
+header { background: #f8f8f8; width: 100%; z-index: 2; border-bottom: 1px solid #ccc; }
+
+@media (prefers-color-scheme: dark) { header { background: black; } }
+
+@media (prefers-color-scheme: dark) { header { border-color: #333; } }
+
+header .content { padding: 1rem 3.5rem; }
+
+header h2 { margin-top: .5em; font-size: 1em; }
+
+header h2 a.button { font-family: inherit; font-size: inherit; border: 1px solid; border-radius: .2em; background: #eee; color: inherit; text-decoration: none; padding: .1em .5em; margin: 1px calc(.1em + 1px); cursor: pointer; border-color: #ccc; }
+
+@media (prefers-color-scheme: dark) { header h2 a.button { background: #333; } }
+
+@media (prefers-color-scheme: dark) { header h2 a.button { border-color: #444; } }
+
+header h2 a.button.current { border: 2px solid; background: #fff; border-color: #999; cursor: default; }
+
+@media (prefers-color-scheme: dark) { header h2 a.button.current { background: #1e1e1e; } }
+
+@media (prefers-color-scheme: dark) { header h2 a.button.current { border-color: #777; } }
+
+header p.text { margin: .5em 0 -.5em; color: #666; font-style: italic; }
+
+@media (prefers-color-scheme: dark) { header p.text { color: #aaa; } }
+
+header.sticky { position: fixed; left: 0; right: 0; height: 2.5em; }
+
+header.sticky .text { display: none; }
+
+header.sticky h1, header.sticky h2 { font-size: 1em; margin-top: 0; display: inline-block; }
+
+header.sticky .content { padding: 0.5rem 3.5rem; }
+
+header.sticky .content p { font-size: 1em; }
+
+header.sticky ~ #source { padding-top: 6.5em; }
+
+main { position: relative; z-index: 1; }
+
+footer { margin: 1rem 3.5rem; }
+
+footer .content { padding: 0; color: #666; font-style: italic; }
+
+@media (prefers-color-scheme: dark) { footer .content { color: #aaa; } }
+
+#index { margin: 1rem 0 0 3.5rem; }
+
+h1 { font-size: 1.25em; display: inline-block; }
+
+#filter_container { float: right; margin: 0 2em 0 0; line-height: 1.66em; }
+
+#filter_container #filter { width: 10em; padding: 0.2em 0.5em; border: 2px solid #ccc; background: #fff; color: #000; }
+
+@media (prefers-color-scheme: dark) { #filter_container #filter { border-color: #444; } }
+
+@media (prefers-color-scheme: dark) { #filter_container #filter { background: #1e1e1e; } }
+
+@media (prefers-color-scheme: dark) { #filter_container #filter { color: #eee; } }
+
+#filter_container #filter:focus { border-color: #007acc; }
+
+#filter_container :disabled ~ label { color: #ccc; }
+
+@media (prefers-color-scheme: dark) { #filter_container :disabled ~ label { color: #444; } }
+
+#filter_container label { font-size: .875em; color: #666; }
+
+@media (prefers-color-scheme: dark) { #filter_container label { color: #aaa; } }
+
+header button { font-family: inherit; font-size: inherit; border: 1px solid; border-radius: .2em; background: #eee; color: inherit; text-decoration: none; padding: .1em .5em; margin: 1px calc(.1em + 1px); cursor: pointer; border-color: #ccc; }
+
+@media (prefers-color-scheme: dark) { header button { background: #333; } }
+
+@media (prefers-color-scheme: dark) { header button { border-color: #444; } }
+
+header button:active, header button:focus { outline: 2px dashed #007acc; }
+
+header button.run { background: #eeffee; }
+
+@media (prefers-color-scheme: dark) { header button.run { background: #373d29; } }
+
+header button.run.show_run { background: #dfd; border: 2px solid #00dd00; margin: 0 .1em; }
+
+@media (prefers-color-scheme: dark) { header button.run.show_run { background: #373d29; } }
+
+header button.mis { background: #ffeeee; }
+
+@media (prefers-color-scheme: dark) { header button.mis { background: #4b1818; } }
+
+header button.mis.show_mis { background: #fdd; border: 2px solid #ff0000; margin: 0 .1em; }
+
+@media (prefers-color-scheme: dark) { header button.mis.show_mis { background: #4b1818; } }
+
+header button.exc { background: #f7f7f7; }
+
+@media (prefers-color-scheme: dark) { header button.exc { background: #333; } }
+
+header button.exc.show_exc { background: #eee; border: 2px solid #808080; margin: 0 .1em; }
+
+@media (prefers-color-scheme: dark) { header button.exc.show_exc { background: #333; } }
+
+header button.par { background: #ffffd5; }
+
+@media (prefers-color-scheme: dark) { header button.par { background: #650; } }
+
+header button.par.show_par { background: #ffa; border: 2px solid #bbbb00; margin: 0 .1em; }
+
+@media (prefers-color-scheme: dark) { header button.par.show_par { background: #650; } }
+
+#help_panel, #source p .annotate.long { display: none; position: absolute; z-index: 999; background: #ffffcc; border: 1px solid #888; border-radius: .2em; color: #333; padding: .25em .5em; }
+
+#source p .annotate.long { white-space: normal; float: right; top: 1.75em; right: 1em; height: auto; }
+
+#help_panel_wrapper { float: right; position: relative; }
+
+#keyboard_icon { margin: 5px; }
+
+#help_panel_state { display: none; }
+
+#help_panel { top: 25px; right: 0; padding: .75em; border: 1px solid #883; color: #333; }
+
+#help_panel .keyhelp p { margin-top: .75em; }
+
+#help_panel .legend { font-style: italic; margin-bottom: 1em; }
+
+.indexfile #help_panel { width: 25em; }
+
+.pyfile #help_panel { width: 18em; }
+
+#help_panel_state:checked ~ #help_panel { display: block; }
+
+kbd { border: 1px solid black; border-color: #888 #333 #333 #888; padding: .1em .35em; font-family: SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-weight: bold; background: #eee; border-radius: 3px; }
+
+.sep { padding: 0 .1em; }
+
+#source { padding: 1em 0 1em 3.5rem; font-family: SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+
+#source p { position: relative; white-space: pre; }
+
+#source p * { box-sizing: border-box; }
+
+#source p .n { float: left; text-align: right; width: 3.5rem; box-sizing: border-box; margin-left: -3.5rem; padding-right: 1em; color: #999; user-select: none; }
+
+@media (prefers-color-scheme: dark) { #source p .n { color: #777; } }
+
+#source p .n.highlight { background: #ffdd00; }
+
+#source p .n a { scroll-margin-top: 6em; text-decoration: none; color: #999; }
+
+@media (prefers-color-scheme: dark) { #source p .n a { color: #777; } }
+
+#source p .n a:hover { text-decoration: underline; color: #999; }
+
+@media (prefers-color-scheme: dark) { #source p .n a:hover { color: #777; } }
+
+#source p .t { display: inline-block; width: 100%; box-sizing: border-box; margin-left: -.5em; padding-left: 0.3em; border-left: 0.2em solid #fff; }
+
+@media (prefers-color-scheme: dark) { #source p .t { border-color: #1e1e1e; } }
+
+#source p .t:hover { background: #f2f2f2; }
+
+@media (prefers-color-scheme: dark) { #source p .t:hover { background: #282828; } }
+
+#source p .t:hover ~ .r .annotate.long { display: block; }
+
+#source p .t .com { color: #008000; font-style: italic; line-height: 1px; }
+
+@media (prefers-color-scheme: dark) { #source p .t .com { color: #6a9955; } }
+
+#source p .t .key { font-weight: bold; line-height: 1px; }
+
+#source p .t .str, #source p .t .fst { color: #0451a5; }
+
+@media (prefers-color-scheme: dark) { #source p .t .str, #source p .t .fst { color: #9cdcfe; } }
+
+#source p.mis .t { border-left: 0.2em solid #ff0000; }
+
+#source p.mis.show_mis .t { background: #fdd; }
+
+@media (prefers-color-scheme: dark) { #source p.mis.show_mis .t { background: #4b1818; } }
+
+#source p.mis.show_mis .t:hover { background: #f2d2d2; }
+
+@media (prefers-color-scheme: dark) { #source p.mis.show_mis .t:hover { background: #532323; } }
+
+#source p.mis.mis2 .t { border-left: 0.2em dotted #ff0000; }
+
+#source p.mis.mis2.show_mis .t { background: #ffeeee; }
+
+@media (prefers-color-scheme: dark) { #source p.mis.mis2.show_mis .t { background: #351b1b; } }
+
+#source p.mis.mis2.show_mis .t:hover { background: #f2d2d2; }
+
+@media (prefers-color-scheme: dark) { #source p.mis.mis2.show_mis .t:hover { background: #532323; } }
+
+#source p.run .t { border-left: 0.2em solid #00dd00; }
+
+#source p.run.show_run .t { background: #dfd; }
+
+@media (prefers-color-scheme: dark) { #source p.run.show_run .t { background: #373d29; } }
+
+#source p.run.show_run .t:hover { background: #d2f2d2; }
+
+@media (prefers-color-scheme: dark) { #source p.run.show_run .t:hover { background: #404633; } }
+
+#source p.run.run2 .t { border-left: 0.2em dotted #00dd00; }
+
+#source p.run.run2.show_run .t { background: #eeffee; }
+
+@media (prefers-color-scheme: dark) { #source p.run.run2.show_run .t { background: #2b2e24; } }
+
+#source p.run.run2.show_run .t:hover { background: #d2f2d2; }
+
+@media (prefers-color-scheme: dark) { #source p.run.run2.show_run .t:hover { background: #404633; } }
+
+#source p.exc .t { border-left: 0.2em solid #808080; }
+
+#source p.exc.show_exc .t { background: #eee; }
+
+@media (prefers-color-scheme: dark) { #source p.exc.show_exc .t { background: #333; } }
+
+#source p.exc.show_exc .t:hover { background: #e2e2e2; }
+
+@media (prefers-color-scheme: dark) { #source p.exc.show_exc .t:hover { background: #3c3c3c; } }
+
+#source p.exc.exc2 .t { border-left: 0.2em dotted #808080; }
+
+#source p.exc.exc2.show_exc .t { background: #f7f7f7; }
+
+@media (prefers-color-scheme: dark) { #source p.exc.exc2.show_exc .t { background: #292929; } }
+
+#source p.exc.exc2.show_exc .t:hover { background: #e2e2e2; }
+
+@media (prefers-color-scheme: dark) { #source p.exc.exc2.show_exc .t:hover { background: #3c3c3c; } }
+
+#source p.par .t { border-left: 0.2em solid #bbbb00; }
+
+#source p.par.show_par .t { background: #ffa; }
+
+@media (prefers-color-scheme: dark) { #source p.par.show_par .t { background: #650; } }
+
+#source p.par.show_par .t:hover { background: #f2f2a2; }
+
+@media (prefers-color-scheme: dark) { #source p.par.show_par .t:hover { background: #6d5d0c; } }
+
+#source p.par.par2 .t { border-left: 0.2em dotted #bbbb00; }
+
+#source p.par.par2.show_par .t { background: #ffffd5; }
+
+@media (prefers-color-scheme: dark) { #source p.par.par2.show_par .t { background: #423a0f; } }
+
+#source p.par.par2.show_par .t:hover { background: #f2f2a2; }
+
+@media (prefers-color-scheme: dark) { #source p.par.par2.show_par .t:hover { background: #6d5d0c; } }
+
+#source p .r { position: absolute; top: 0; right: 2.5em; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; }
+
+#source p .annotate { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; color: #666; padding-right: .5em; }
+
+@media (prefers-color-scheme: dark) { #source p .annotate { color: #ddd; } }
+
+#source p .annotate.short:hover ~ .long { display: block; }
+
+#source p .annotate.long { width: 30em; right: 2.5em; }
+
+#source p input { display: none; }
+
+#source p input ~ .r label.ctx { cursor: pointer; border-radius: .25em; }
+
+#source p input ~ .r label.ctx::before { content: "▶ "; }
+
+#source p input ~ .r label.ctx:hover { background: #e8f4ff; color: #666; }
+
+@media (prefers-color-scheme: dark) { #source p input ~ .r label.ctx:hover { background: #0f3a42; } }
+
+@media (prefers-color-scheme: dark) { #source p input ~ .r label.ctx:hover { color: #aaa; } }
+
+#source p input:checked ~ .r label.ctx { background: #d0e8ff; color: #666; border-radius: .75em .75em 0 0; padding: 0 .5em; margin: -.25em 0; }
+
+@media (prefers-color-scheme: dark) { #source p input:checked ~ .r label.ctx { background: #056; } }
+
+@media (prefers-color-scheme: dark) { #source p input:checked ~ .r label.ctx { color: #aaa; } }
+
+#source p input:checked ~ .r label.ctx::before { content: "▼ "; }
+
+#source p input:checked ~ .ctxs { padding: .25em .5em; overflow-y: scroll; max-height: 10.5em; }
+
+#source p label.ctx { color: #999; display: inline-block; padding: 0 .5em; font-size: .8333em; }
+
+@media (prefers-color-scheme: dark) { #source p label.ctx { color: #777; } }
+
+#source p .ctxs { display: block; max-height: 0; overflow-y: hidden; transition: all .2s; padding: 0 .5em; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; white-space: nowrap; background: #d0e8ff; border-radius: .25em; margin-right: 1.75em; text-align: right; }
+
+@media (prefers-color-scheme: dark) { #source p .ctxs { background: #056; } }
+
+#index { font-family: SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 0.875em; }
+
+#index table.index { margin-left: -.5em; }
+
+#index td, #index th { text-align: right; vertical-align: baseline; padding: .25em .5em; border-bottom: 1px solid #eee; }
+
+@media (prefers-color-scheme: dark) { #index td, #index th { border-color: #333; } }
+
+#index td.name, #index th.name { text-align: left; width: auto; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; min-width: 15em; }
+
+#index td.left, #index th.left { text-align: left; }
+
+#index td.spacer, #index th.spacer { border: none; padding: 0; }
+
+#index td.spacer:hover, #index th.spacer:hover { background: inherit; }
+
+#index th { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; font-style: italic; color: #333; border-color: #ccc; cursor: pointer; }
+
+@media (prefers-color-scheme: dark) { #index th { color: #ddd; } }
+
+@media (prefers-color-scheme: dark) { #index th { border-color: #444; } }
+
+#index th:hover { background: #eee; }
+
+@media (prefers-color-scheme: dark) { #index th:hover { background: #333; } }
+
+#index th .arrows { color: #666; font-size: 85%; font-family: sans-serif; font-style: normal; pointer-events: none; }
+
+#index th[aria-sort="ascending"], #index th[aria-sort="descending"] { white-space: nowrap; background: #eee; padding-left: .5em; }
+
+@media (prefers-color-scheme: dark) { #index th[aria-sort="ascending"], #index th[aria-sort="descending"] { background: #333; } }
+
+#index th[aria-sort="ascending"] .arrows::after { content: " ▲"; }
+
+#index th[aria-sort="descending"] .arrows::after { content: " ▼"; }
+
+#index tr.grouphead th { cursor: default; font-style: normal; border-color: #999; }
+
+@media (prefers-color-scheme: dark) { #index tr.grouphead th { border-color: #777; } }
+
+#index td.name { font-size: 1.15em; }
+
+#index td.name a { text-decoration: none; color: inherit; }
+
+#index td.name .no-noun { font-style: italic; }
+
+#index tr.total td, #index tr.total_dynamic td { font-weight: bold; border-bottom: none; }
+
+#index tr.region:hover { background: #eee; }
+
+@media (prefers-color-scheme: dark) { #index tr.region:hover { background: #333; } }
+
+#index tr.region:hover td.name { text-decoration: underline; color: inherit; }
+
+#scroll_marker { position: fixed; z-index: 3; right: 0; top: 0; width: 16px; height: 100%; background: #fff; border-left: 1px solid #eee; will-change: transform; }
+
+@media (prefers-color-scheme: dark) { #scroll_marker { background: #1e1e1e; } }
+
+@media (prefers-color-scheme: dark) { #scroll_marker { border-color: #333; } }
+
+#scroll_marker .marker { background: #ccc; position: absolute; min-height: 3px; width: 100%; }
+
+@media (prefers-color-scheme: dark) { #scroll_marker .marker { background: #444; } }
+</style>
+    <script>// Licensed under the Apache License: http://www.apache.org/licenses/LICENSE-2.0
+// For details: https://github.com/coveragepy/coveragepy/blob/main/NOTICE.txt
+
+// Coverage.py HTML report browser code.
+/*jslint browser: true, sloppy: true, vars: true, plusplus: true, maxerr: 50, indent: 4 */
+/*global coverage: true, document, window, $ */
+
+coverage = {};
+
+// General helpers
+function debounce(callback, wait) {
+    let timeoutId = null;
+    return function(...args) {
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(() => {
+            callback.apply(this, args);
+        }, wait);
+    };
+};
+
+function checkVisible(element) {
+    const rect = element.getBoundingClientRect();
+    const viewBottom = Math.max(document.documentElement.clientHeight, window.innerHeight);
+    const viewTop = 30;
+    return !(rect.bottom < viewTop || rect.top >= viewBottom);
+}
+
+function on_click(sel, fn) {
+    const elt = document.querySelector(sel);
+    if (elt) {
+        elt.addEventListener("click", fn);
+    }
+}
+
+// Helpers for table sorting
+function getCellValue(row, column = 0) {
+    const cell = row.cells[column]  // nosemgrep: eslint.detect-object-injection
+    if (cell.childElementCount == 1) {
+        var child = cell.firstElementChild;
+        if (child.tagName === "A") {
+            child = child.firstElementChild;
+        }
+        if (child instanceof HTMLDataElement && child.value) {
+            return child.value;
+        }
+    }
+    return cell.innerText || cell.textContent;
+}
+
+function rowComparator(rowA, rowB, column = 0) {
+    let valueA = getCellValue(rowA, column);
+    let valueB = getCellValue(rowB, column);
+    if (!isNaN(valueA) && !isNaN(valueB)) {
+        return valueA - valueB;
+    }
+    return valueA.localeCompare(valueB, undefined, {numeric: true});
+}
+
+function sortColumn(th) {
+    // Get the current sorting direction of the selected header,
+    // clear state on other headers and then set the new sorting direction.
+    const currentSortOrder = th.getAttribute("aria-sort");
+    [...th.parentElement.cells].forEach(header => header.setAttribute("aria-sort", "none"));
+    var direction;
+    if (currentSortOrder === "none") {
+        direction = th.dataset.defaultSortOrder || "ascending";
+    }
+    else if (currentSortOrder === "ascending") {
+        direction = "descending";
+    }
+    else {
+        direction = "ascending";
+    }
+    th.setAttribute("aria-sort", direction);
+
+    const column = [...th.parentElement.cells].indexOf(th)
+
+    // Sort all rows and afterwards append them in order to move them in the DOM.
+    Array.from(th.closest("table").querySelectorAll("tbody tr"))
+        .sort((rowA, rowB) => rowComparator(rowA, rowB, column) * (direction === "ascending" ? 1 : -1))
+        .forEach(tr => tr.parentElement.appendChild(tr));
+
+    // Save the sort order for next time.
+    if (th.id !== "region") {
+        let th_id = "file";  // Sort by file if we don't have a column id
+        let current_direction = direction;
+        const stored_list = localStorage.getItem(coverage.INDEX_SORT_STORAGE);
+        if (stored_list) {
+            ({th_id, direction} = JSON.parse(stored_list))
+        }
+        localStorage.setItem(coverage.INDEX_SORT_STORAGE, JSON.stringify({
+            "th_id": th.id,
+            "direction": current_direction
+        }));
+        if (th.id !== th_id || document.getElementById("region")) {
+            // Sort column has changed, unset sorting by function or class.
+            localStorage.setItem(coverage.SORTED_BY_REGION, JSON.stringify({
+                "by_region": false,
+                "region_direction": current_direction
+            }));
+        }
+    }
+    else {
+        // Sort column has changed to by function or class, remember that.
+        localStorage.setItem(coverage.SORTED_BY_REGION, JSON.stringify({
+            "by_region": true,
+            "region_direction": direction
+        }));
+    }
+}
+
+// Find all the elements with data-shortcut attribute, and use them to assign a shortcut key.
+coverage.assign_shortkeys = function () {
+    document.querySelectorAll("[data-shortcut]").forEach(element => {
+        document.addEventListener("keypress", event => {
+            if (event.target.tagName.toLowerCase() === "input") {
+                return; // ignore keypress from search filter
+            }
+            if (event.key === element.dataset.shortcut) {
+                element.click();
+            }
+        });
+    });
+};
+
+// Create the events for the filter box.
+coverage.wire_up_filter = function () {
+    // Populate the filter and hide100 inputs if there are saved values for them.
+    const saved_filter_value = localStorage.getItem(coverage.FILTER_STORAGE);
+    if (saved_filter_value) {
+        document.getElementById("filter").value = saved_filter_value;
+    }
+    const saved_hide100_value = localStorage.getItem(coverage.HIDE100_STORAGE);
+    if (saved_hide100_value) {
+        document.getElementById("hide100").checked = JSON.parse(saved_hide100_value);
+    }
+
+    // Cache elements.
+    const table = document.querySelector("table.index");
+    const table_body_rows = table.querySelectorAll("tbody tr");
+    const no_rows = document.getElementById("no_rows");
+
+    const footer = table.tFoot.rows[0];
+    const ratio_columns = Array.from(footer.cells).map(cell => Boolean(cell.dataset.ratio));
+
+    // Observe filter keyevents.
+    const filter_handler = (event => {
+        // Keep running total of each metric, first index contains number of shown rows
+        const totals = ratio_columns.map(
+            is_ratio => is_ratio ? {"numer": 0, "denom": 0} : 0
+        );
+
+        var text = document.getElementById("filter").value;
+        // Store filter value
+        localStorage.setItem(coverage.FILTER_STORAGE, text);
+        const casefold = (text === text.toLowerCase());
+        const hide100 = document.getElementById("hide100").checked;
+        // Store hide value.
+        localStorage.setItem(coverage.HIDE100_STORAGE, JSON.stringify(hide100));
+
+        // Hide / show elements.
+        table_body_rows.forEach(row => {
+            var show = false;
+            // Check the text filter.
+            for (let column = 0; column < totals.length; column++) {
+                cell = row.cells[column];
+                if (cell.classList.contains("name")) {
+                    var celltext = cell.textContent;
+                    if (casefold) {
+                        celltext = celltext.toLowerCase();
+                    }
+                    if (celltext.includes(text)) {
+                        show = true;
+                    }
+                }
+            }
+
+            // Check the "hide covered" filter.
+            if (show && hide100) {
+                const [numer, denom] = row.cells[row.cells.length - 1].dataset.ratio.split(" ");
+                show = (numer !== denom);
+            }
+
+            if (!show) {
+                // hide
+                row.classList.add("hidden");
+                return;
+            }
+
+            // show
+            row.classList.remove("hidden");
+            totals[0]++;
+
+            for (let column = 0; column < totals.length; column++) {
+                // Accumulate dynamic totals
+                cell = row.cells[column]  // nosemgrep: eslint.detect-object-injection
+                if (cell.matches(".name, .spacer")) {
+                    continue;
+                }
+                if (ratio_columns[column] && cell.dataset.ratio) {
+                    // Column stores a ratio
+                    const [numer, denom] = cell.dataset.ratio.split(" ");
+                    totals[column]["numer"] += parseInt(numer, 10);  // nosemgrep: eslint.detect-object-injection
+                    totals[column]["denom"] += parseInt(denom, 10);  // nosemgrep: eslint.detect-object-injection
+                }
+                else {
+                    totals[column] += parseInt(cell.textContent, 10);  // nosemgrep: eslint.detect-object-injection
+                }
+            }
+        });
+
+        // Show placeholder if no rows will be displayed.
+        if (!totals[0]) {
+            // Show placeholder, hide table.
+            no_rows.style.display = "block";
+            table.style.display = "none";
+            return;
+        }
+
+        // Hide placeholder, show table.
+        no_rows.style.display = null;
+        table.style.display = null;
+
+        // Calculate new dynamic sum values based on visible rows.
+        for (let column = 0; column < totals.length; column++) {
+            // Get footer cell element.
+            const cell = footer.cells[column];  // nosemgrep: eslint.detect-object-injection
+            if (cell.matches(".name, .spacer")) {
+                continue;
+            }
+
+            // Set value into dynamic footer cell element.
+            if (ratio_columns[column]) {
+                // Percentage column uses the numerator and denominator,
+                // and adapts to the number of decimal places.
+                const match = /\.([0-9]+)/.exec(cell.textContent);
+                const places = match ? match[1].length : 0;
+                const { numer, denom } = totals[column];  // nosemgrep: eslint.detect-object-injection
+                cell.dataset.ratio = `${numer} ${denom}`;
+                // Check denom to prevent NaN if filtered files contain no statements
+                cell.textContent = denom
+                    ? `${(numer * 100 / denom).toFixed(places)}%`
+                    : `${(100).toFixed(places)}%`;
+            }
+            else {
+                cell.textContent = totals[column];  // nosemgrep: eslint.detect-object-injection
+            }
+        }
+    });
+
+    document.getElementById("filter").addEventListener("input", debounce(filter_handler));
+    document.getElementById("hide100").addEventListener("input", debounce(filter_handler));
+
+    // Trigger change event on setup, to force filter on page refresh
+    // (filter value may still be present).
+    document.getElementById("filter").dispatchEvent(new Event("input"));
+    document.getElementById("hide100").dispatchEvent(new Event("input"));
+};
+coverage.FILTER_STORAGE = "COVERAGE_FILTER_VALUE";
+coverage.HIDE100_STORAGE = "COVERAGE_HIDE100_VALUE";
+
+// Set up the click-to-sort columns.
+coverage.wire_up_sorting = function () {
+    document.querySelectorAll("[data-sortable] th[aria-sort]").forEach(
+        th => th.addEventListener("click", e => sortColumn(e.target))
+    );
+
+    // Look for a localStorage item containing previous sort settings:
+    let th_id = "file", direction = "ascending";
+    const stored_list = localStorage.getItem(coverage.INDEX_SORT_STORAGE);
+    if (stored_list) {
+        ({th_id, direction} = JSON.parse(stored_list));
+    }
+    let by_region = false, region_direction = "ascending";
+    const sorted_by_region = localStorage.getItem(coverage.SORTED_BY_REGION);
+    if (sorted_by_region) {
+        ({
+            by_region,
+            region_direction
+        } = JSON.parse(sorted_by_region));
+    }
+
+    const region_id = "region";
+    if (by_region && document.getElementById(region_id)) {
+        direction = region_direction;
+    }
+    // If we are in a page that has a column with id of "region", sort on
+    // it if the last sort was by function or class.
+    let th;
+    if (document.getElementById(region_id)) {
+        th = document.getElementById(by_region ? region_id : th_id);
+    }
+    else {
+        th = document.getElementById(th_id);
+    }
+    th.setAttribute("aria-sort", direction === "ascending" ? "descending" : "ascending");
+    th.click()
+};
+
+coverage.INDEX_SORT_STORAGE = "COVERAGE_INDEX_SORT_2";
+coverage.SORTED_BY_REGION = "COVERAGE_SORT_REGION";
+
+// Loaded on index.html
+coverage.index_ready = function () {
+    coverage.assign_shortkeys();
+    coverage.wire_up_filter();
+    coverage.wire_up_sorting();
+
+    on_click(".button_prev_file", coverage.to_prev_file);
+    on_click(".button_next_file", coverage.to_next_file);
+
+    on_click(".button_show_hide_help", coverage.show_hide_help);
+};
+
+// -- pyfile stuff --
+
+coverage.LINE_FILTERS_STORAGE = "COVERAGE_LINE_FILTERS";
+
+coverage.pyfile_ready = function () {
+    // If we're directed to a particular line number, highlight the line.
+    var frag = location.hash;
+    if (frag.length > 2 && frag[1] === "t") {
+        document.querySelector(frag).closest(".n").classList.add("highlight");
+        coverage.set_sel(parseInt(frag.substr(2), 10));
+    }
+    else {
+        coverage.set_sel(0);
+    }
+
+    on_click(".button_toggle_run", coverage.toggle_lines);
+    on_click(".button_toggle_mis", coverage.toggle_lines);
+    on_click(".button_toggle_exc", coverage.toggle_lines);
+    on_click(".button_toggle_par", coverage.toggle_lines);
+
+    on_click(".button_next_chunk", coverage.to_next_chunk_nicely);
+    on_click(".button_prev_chunk", coverage.to_prev_chunk_nicely);
+    on_click(".button_top_of_page", coverage.to_top);
+    on_click(".button_first_chunk", coverage.to_first_chunk);
+
+    on_click(".button_prev_file", coverage.to_prev_file);
+    on_click(".button_next_file", coverage.to_next_file);
+    on_click(".button_to_index", coverage.to_index);
+
+    on_click(".button_show_hide_help", coverage.show_hide_help);
+
+    coverage.filters = undefined;
+    try {
+        coverage.filters = localStorage.getItem(coverage.LINE_FILTERS_STORAGE);
+    } catch(err) {}
+
+    if (coverage.filters) {
+        coverage.filters = JSON.parse(coverage.filters);
+    }
+    else {
+        coverage.filters = {run: false, exc: true, mis: true, par: true};
+    }
+
+    for (cls in coverage.filters) {
+        coverage.set_line_visibilty(cls, coverage.filters[cls]);  // nosemgrep: eslint.detect-object-injection
+    }
+
+    coverage.assign_shortkeys();
+    coverage.init_scroll_markers();
+    coverage.wire_up_sticky_header();
+
+    document.querySelectorAll("[id^=ctxs]").forEach(
+        cbox => cbox.addEventListener("click", coverage.expand_contexts)
+    );
+
+    // Rebuild scroll markers when the window height changes.
+    window.addEventListener("resize", coverage.build_scroll_markers);
+};
+
+coverage.toggle_lines = function (event) {
+    const btn = event.target.closest("button");
+    const category = btn.value
+    const show = !btn.classList.contains("show_" + category);
+    coverage.set_line_visibilty(category, show);
+    coverage.build_scroll_markers();
+    coverage.filters[category] = show;
+    try {
+        localStorage.setItem(coverage.LINE_FILTERS_STORAGE, JSON.stringify(coverage.filters));
+    } catch(err) {}
+};
+
+coverage.set_line_visibilty = function (category, should_show) {
+    const cls = "show_" + category;
+    const btn = document.querySelector(".button_toggle_" + category);
+    if (btn) {
+        if (should_show) {
+            document.querySelectorAll("#source ." + category).forEach(e => e.classList.add(cls));
+            btn.classList.add(cls);
+        }
+        else {
+            document.querySelectorAll("#source ." + category).forEach(e => e.classList.remove(cls));
+            btn.classList.remove(cls);
+        }
+    }
+};
+
+// Return the nth line div.
+coverage.line_elt = function (n) {
+    return document.getElementById("t" + n)?.closest("p");
+};
+
+// Set the selection.  b and e are line numbers.
+coverage.set_sel = function (b, e) {
+    // The first line selected.
+    coverage.sel_begin = b;
+    // The next line not selected.
+    coverage.sel_end = (e === undefined) ? b+1 : e;
+};
+
+coverage.to_top = function () {
+    coverage.set_sel(0, 1);
+    coverage.scroll_window(0);
+};
+
+coverage.to_first_chunk = function () {
+    coverage.set_sel(0, 1);
+    coverage.to_next_chunk();
+};
+
+coverage.to_prev_file = function () {
+    window.location = document.getElementById("prevFileLink").href;
+}
+
+coverage.to_next_file = function () {
+    window.location = document.getElementById("nextFileLink").href;
+}
+
+coverage.to_index = function () {
+    location.href = document.getElementById("indexLink").href;
+}
+
+coverage.show_hide_help = function () {
+    const helpCheck = document.getElementById("help_panel_state")
+    helpCheck.checked = !helpCheck.checked;
+}
+
+// Return a string indicating what kind of chunk this line belongs to,
+// or null if not a chunk.
+coverage.chunk_indicator = function (line_elt) {
+    const classes = line_elt?.className;
+    if (!classes) {
+        return null;
+    }
+    const match = classes.match(/\bshow_\w+\b/);
+    if (!match) {
+        return null;
+    }
+    return match[0];
+};
+
+coverage.to_next_chunk = function () {
+    const c = coverage;
+
+    // Find the start of the next colored chunk.
+    var probe = c.sel_end;
+    var chunk_indicator, probe_line;
+    while (true) {
+        probe_line = c.line_elt(probe);
+        if (!probe_line) {
+            return;
+        }
+        chunk_indicator = c.chunk_indicator(probe_line);
+        if (chunk_indicator) {
+            break;
+        }
+        probe++;
+    }
+
+    // There's a next chunk, `probe` points to it.
+    var begin = probe;
+
+    // Find the end of this chunk.
+    var next_indicator = chunk_indicator;
+    while (next_indicator === chunk_indicator) {
+        probe++;
+        probe_line = c.line_elt(probe);
+        next_indicator = c.chunk_indicator(probe_line);
+    }
+    c.set_sel(begin, probe);
+    c.show_selection();
+};
+
+coverage.to_prev_chunk = function () {
+    const c = coverage;
+
+    // Find the end of the prev colored chunk.
+    var probe = c.sel_begin-1;
+    var probe_line = c.line_elt(probe);
+    if (!probe_line) {
+        return;
+    }
+    var chunk_indicator = c.chunk_indicator(probe_line);
+    while (probe > 1 && !chunk_indicator) {
+        probe--;
+        probe_line = c.line_elt(probe);
+        if (!probe_line) {
+            return;
+        }
+        chunk_indicator = c.chunk_indicator(probe_line);
+    }
+
+    // There is no previous highlighted chunk.
+    if (!chunk_indicator) {
+        return;
+    }
+
+    // There's a prev chunk, `probe` points to its last line.
+    var end = probe+1;
+
+    // Find the beginning of this chunk.
+    while (probe > 1) {
+        probe_line = c.line_elt(probe-1);
+        if (c.chunk_indicator(probe_line) !== chunk_indicator) {
+            break;
+        }
+        probe--;
+    }
+    c.set_sel(probe, end);
+    c.show_selection();
+};
+
+// Returns 0, 1, or 2: how many of the two ends of the selection are on
+// the screen right now?
+coverage.selection_ends_on_screen = function () {
+    if (coverage.sel_begin === 0) {
+        return 0;
+    }
+
+    const begin = coverage.line_elt(coverage.sel_begin);
+    const end = coverage.line_elt(coverage.sel_end-1);
+
+    return (
+        (checkVisible(begin) ? 1 : 0)
+        + (checkVisible(end) ? 1 : 0)
+    );
+};
+
+coverage.to_next_chunk_nicely = function () {
+    if (coverage.selection_ends_on_screen() === 0) {
+        // The selection is entirely off the screen:
+        // Set the top line on the screen as selection.
+
+        // This will select the top-left of the viewport
+        // As this is most likely the span with the line number we take the parent
+        const line = document.elementFromPoint(0, 0).parentElement;
+        if (line.parentElement !== document.getElementById("source")) {
+            // The element is not a source line but the header or similar
+            coverage.select_line_or_chunk(1);
+        }
+        else {
+            // We extract the line number from the id
+            coverage.select_line_or_chunk(parseInt(line.id.substring(1), 10));
+        }
+    }
+    coverage.to_next_chunk();
+};
+
+coverage.to_prev_chunk_nicely = function () {
+    if (coverage.selection_ends_on_screen() === 0) {
+        // The selection is entirely off the screen:
+        // Set the lowest line on the screen as selection.
+
+        // This will select the bottom-left of the viewport
+        // As this is most likely the span with the line number we take the parent
+        const line = document.elementFromPoint(document.documentElement.clientHeight-1, 0).parentElement;
+        if (line.parentElement !== document.getElementById("source")) {
+            // The element is not a source line but the header or similar
+            coverage.select_line_or_chunk(coverage.lines_len);
+        }
+        else {
+            // We extract the line number from the id
+            coverage.select_line_or_chunk(parseInt(line.id.substring(1), 10));
+        }
+    }
+    coverage.to_prev_chunk();
+};
+
+// Select line number lineno, or if it is in a colored chunk, select the
+// entire chunk
+coverage.select_line_or_chunk = function (lineno) {
+    var c = coverage;
+    var probe_line = c.line_elt(lineno);
+    if (!probe_line) {
+        return;
+    }
+    var the_indicator = c.chunk_indicator(probe_line);
+    if (the_indicator) {
+        // The line is in a highlighted chunk.
+        // Search backward for the first line.
+        var probe = lineno;
+        var indicator = the_indicator;
+        while (probe > 0 && indicator === the_indicator) {
+            probe--;
+            probe_line = c.line_elt(probe);
+            if (!probe_line) {
+                break;
+            }
+            indicator = c.chunk_indicator(probe_line);
+        }
+        var begin = probe + 1;
+
+        // Search forward for the last line.
+        probe = lineno;
+        indicator = the_indicator;
+        while (indicator === the_indicator) {
+            probe++;
+            probe_line = c.line_elt(probe);
+            indicator = c.chunk_indicator(probe_line);
+        }
+
+        coverage.set_sel(begin, probe);
+    }
+    else {
+        coverage.set_sel(lineno);
+    }
+};
+
+coverage.show_selection = function () {
+    // Highlight the lines in the chunk
+    document.querySelectorAll("#source .highlight").forEach(e => e.classList.remove("highlight"));
+    for (let probe = coverage.sel_begin; probe < coverage.sel_end; probe++) {
+        coverage.line_elt(probe).querySelector(".n").classList.add("highlight");
+    }
+
+    coverage.scroll_to_selection();
+};
+
+coverage.scroll_to_selection = function () {
+    // Scroll the page if the chunk isn't fully visible.
+    if (coverage.selection_ends_on_screen() < 2) {
+        const element = coverage.line_elt(coverage.sel_begin);
+        coverage.scroll_window(element.offsetTop - 60);
+    }
+};
+
+coverage.scroll_window = function (to_pos) {
+    window.scroll({top: to_pos, behavior: "smooth"});
+};
+
+coverage.init_scroll_markers = function () {
+    // Init some variables
+    coverage.lines_len = document.querySelectorAll("#source > p").length;
+
+    // Build html
+    coverage.build_scroll_markers();
+};
+
+coverage.build_scroll_markers = function () {
+    const temp_scroll_marker = document.getElementById("scroll_marker")
+    if (temp_scroll_marker) temp_scroll_marker.remove();
+    // Don't build markers if the window has no scroll bar.
+    if (document.body.scrollHeight <= window.innerHeight) {
+        return;
+    }
+
+    const marker_scale = window.innerHeight / document.body.scrollHeight;
+    const line_height = Math.min(Math.max(3, window.innerHeight / coverage.lines_len), 10);
+
+    let previous_line = -99, last_mark, last_top;
+
+    const scroll_marker = document.createElement("div");
+    scroll_marker.id = "scroll_marker";
+    document.getElementById("source").querySelectorAll(
+        "p.show_run, p.show_mis, p.show_exc, p.show_exc, p.show_par"
+    ).forEach(element => {
+        const line_top = Math.floor(element.offsetTop * marker_scale);
+        const line_number = parseInt(element.querySelector(".n a").id.substr(1));
+
+        if (line_number === previous_line + 1) {
+            // If this solid missed block just make previous mark higher.
+            last_mark.style.height = `${line_top + line_height - last_top}px`;
+        }
+        else {
+            // Add colored line in scroll_marker block.
+            last_mark = document.createElement("div");
+            last_mark.id = `m${line_number}`;
+            last_mark.classList.add("marker");
+            last_mark.style.height = `${line_height}px`;
+            last_mark.style.top = `${line_top}px`;
+            scroll_marker.append(last_mark);
+            last_top = line_top;
+        }
+
+        previous_line = line_number;
+    });
+
+    // Append last to prevent layout calculation
+    document.body.append(scroll_marker);
+};
+
+coverage.wire_up_sticky_header = function () {
+    const header = document.querySelector("header");
+    const header_bottom = (
+        header.querySelector(".content h2").getBoundingClientRect().top -
+        header.getBoundingClientRect().top
+    );
+
+    function updateHeader() {
+        if (window.scrollY > header_bottom) {
+            header.classList.add("sticky");
+        }
+        else {
+            header.classList.remove("sticky");
+        }
+    }
+
+    window.addEventListener("scroll", updateHeader);
+    updateHeader();
+};
+
+coverage.expand_contexts = function (e) {
+    var ctxs = e.target.parentNode.querySelector(".ctxs");
+
+    if (!ctxs.classList.contains("expanded")) {
+        var ctxs_text = ctxs.textContent;
+        var width = Number(ctxs_text[0]);
+        ctxs.textContent = "";
+        for (var i = 1; i < ctxs_text.length; i += width) {
+            key = ctxs_text.substring(i, i + width).trim();
+            ctxs.appendChild(document.createTextNode(contexts[key]));
+            ctxs.appendChild(document.createElement("br"));
+        }
+        ctxs.classList.add("expanded");
+    }
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+    if (document.body.classList.contains("indexfile")) {
+        coverage.index_ready();
+    }
+    else {
+        coverage.pyfile_ready();
+    }
+});
+</script>
 </head>
 <body class="indexfile">
 <header>
@@ -16,7 +1145,7 @@
         <aside id="help_panel_wrapper">
             <input id="help_panel_state" type="checkbox">
             <label for="help_panel_state">
-                <img id="keyboard_icon" src="keybd_closed_cb_900cfef5.png" alt="Show/hide keyboard shortcuts">
+                <img id="keyboard_icon" src="data:image/png;base64,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dHMvMS4xLyIKICAgIHhtbG5zOnRpZmY9Imh0dHA6Ly9ucy5hZG9iZS5jb20vdGlmZi8xLjAvIgogICAgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIgogICB4bXBNTTpEb2N1bWVudElEPSJnaW1wOmRvY2lkOmdpbXA6MTg5N2U1NzgtNWRjNC00YzI1LTk4ODktMGYwNzQ5ODliOWU5IgogICB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjNmZDYyODExLWI2MmYtNDhlMC04ZDE5LWU5ZjA4MTk5MDNjOSIKICAgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjIzNjc5MTZmLTllZTQtNDU1OS1hZjAxLWY2MTEwYmI2ZjNlZiIKICAgR0lNUDpBUEk9IjIuMCIKICAgR0lNUDpQbGF0Zm9ybT0iTWFjIE9TIgogICBHSU1QOlRpbWVTdGFtcD0iMTYxODM2OTQxOTUzMzM4MCIKICAgR0lNUDpWZXJzaW9uPSIyLjEwLjIyIgogICBkYzpGb3JtYXQ9ImltYWdlL3BuZyIKICAgdGlmZjpPcmllbnRhdGlvbj0iMSIKICAgeG1wOkNyZWF0b3JUb29sPSJHSU1QIDIuMTAiPgogICA8aXB0Y0V4dDpMb2NhdGlvbkNyZWF0ZWQ+CiAgICA8cmRmOkJhZy8+CiAgIDwvaXB0Y0V4dDpMb2NhdGlvbkNyZWF0ZWQ+CiAgIDxpcHRjRXh0OkxvY2F0aW9uU2hvd24+CiAgICA8cmRmOkJhZy8+CiAgIDwvaXB0Y0V4dDpMb2NhdGlvblNob3duPgogICA8aXB0Y0V4dDpBcnR3b3JrT3JPYmplY3Q+CiAgICA8cmRmOkJhZy8+CiAgIDwvaXB0Y0V4dDpBcnR3b3JrT3JPYmplY3Q+CiAgIDxpcHRjRXh0OlJlZ2lzdHJ5SWQ+CiAgICA8cmRmOkJhZy8+CiAgIDwvaXB0Y0V4dDpSZWdpc3RyeUlkPgogICA8eG1wTU06SGlzdG9yeT4KICAgIDxyZGY6U2VxPgogICAgIDxyZGY6bGkKICAgICAgc3RFdnQ6YWN0aW9uPSJzYXZlZCIKICAgICAgc3RFdnQ6Y2hhbmdlZD0iLyIKICAgICAgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDpjNGRkYzA2Ni01YjE0LTQ3NjEtOTY4Yy01MDIxOGJhNTBjNGYiCiAgICAgIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkdpbXAgMi4xMCAoTWFjIE9TKSIKICAgICAgc3RFdnQ6d2hlbj0iMjAyMS0wNC0xM1QyMzowMzozOS0wNDowMCIvPgogICAgPC9yZGY6U2VxPgogICA8L3htcE1NOkhpc3Rvcnk+CiAgIDxwbHVzOkltYWdlU3VwcGxpZXI+CiAgICA8cmRmOlNlcS8+CiAgIDwvcGx1czpJbWFnZVN1cHBsaWVyPgogICA8cGx1czpJbWFnZUNyZWF0b3I+CiAgICA8cmRmOlNlcS8+CiAgIDwvcGx1czpJbWFnZUNyZWF0b3I+CiAgIDxwbHVzOkNvcHlyaWdodE93bmVyPgogICAgPHJkZjpTZXEvPgogICA8L3BsdXM6Q29weXJpZ2h0T3duZXI+CiAgIDxwbHVzOkxpY2Vuc29yPgogICAgPHJkZjpTZXEvPgogICA8L3BsdXM6TGljZW5zb3I+CiAgPC9yZGY6RGVzY3JpcHRpb24+CiA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgCjw/eHBhY2tldCBlbmQ9InciPz7WAwHCAAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxMAAAsTAQCanBgAAAAHdElNRQflBA4DAycTY6mTAAAAT0lEQVQoz2Nk+M9AJGBhIFItIwMTAwMDQzpDOhbyM4oIA0QpdsCLYe5/Yh3AAnEAAwMDw0yGdKwkRA6vAxio4ACEZQxwS5GdQisHMBIfsQAiaxfpzCXMygAAAABJRU5ErkJggg==" alt="Show/hide keyboard shortcuts">
             </label>
             <div id="help_panel">
                 <p class="legend">Shortcuts on this page</p>
@@ -53,11 +1182,11 @@
         <h2>
                 <a class="button" href="index.html">Files</a>
                 <a class="button current">Functions</a>
-                <a class="button" href="class_index.html">Classes</a>
+
         </h2>
         <p class="text">
             <a class="nav" href="https://coverage.readthedocs.io/en/7.16.2">coverage.py v7.16.2</a>,
-            created at 2026-10-16 21:39 +0800
+            created at 2026-10-21 16:19 +0800
         </p>
     </div>
 </header>
@@ -92,8 +1221,23 @@
         </thead>
         <tbody>
             <tr class="region">
-                <td class="name"><a href="z_c7248507e70e5422_main_py.html#t4">postfix_notation<span class="sep">/</span>main.py</a></td>
-                <td class="name"><a href="z_c7248507e70e5422_main_py.html#t4"><data value='eval_expr'>eval_expr</data></a></td>
+                <td class="name"><a href="#t5">postfix_notation<span class="sep">/</span>main.py</a></td>
+                <td class="name"><a href="#t5"><data value='parse_args'>parse_args</data></a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="6 6">100%</td>
+                <td>6</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="4 4">100%</td>
+                <td>4</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="10 10">100%</td>
+            </tr>
+            <tr class="region">
+                <td class="name"><a href="#t14">postfix_notation<span class="sep">/</span>main.py</a></td>
+                <td class="name"><a href="#t14"><data value='eval_expr'>eval_expr</data></a></td>
                 <td class="spacer">&nbsp;</td>
                 <td data-ratio="24 24">100%</td>
                 <td>24</td>
@@ -107,8 +1251,8 @@
                 <td data-ratio="34 34">100%</td>
             </tr>
             <tr class="region">
-                <td class="name"><a href="z_c7248507e70e5422_main_py.html#t35">postfix_notation<span class="sep">/</span>main.py</a></td>
-                <td class="name"><a href="z_c7248507e70e5422_main_py.html#t35"><data value='apply_op'>apply_op</data></a></td>
+                <td class="name"><a href="#t45">postfix_notation<span class="sep">/</span>main.py</a></td>
+                <td class="name"><a href="#t45"><data value='apply_op'>apply_op</data></a></td>
                 <td class="spacer">&nbsp;</td>
                 <td data-ratio="13 13">100%</td>
                 <td>13</td>
@@ -122,11 +1266,11 @@
                 <td data-ratio="21 21">100%</td>
             </tr>
             <tr class="region">
-                <td class="name"><a href="z_c7248507e70e5422_main_py.html">postfix_notation<span class="sep">/</span>main.py</a></td>
-                <td class="name"><a href="z_c7248507e70e5422_main_py.html"><data value=''><span class='no-noun'>(no function)</span></data></a></td>
+                <td class="name"><a href="#source-main">postfix_notation<span class="sep">/</span>main.py</a></td>
+                <td class="name"><a href="#source-main"><data value=''><span class='no-noun'>(no function)</span></data></a></td>
                 <td class="spacer">&nbsp;</td>
-                <td data-ratio="12 12">100%</td>
-                <td>12</td>
+                <td data-ratio="15 15">100%</td>
+                <td>15</td>
                 <td>0</td>
                 <td>0</td>
                 <td class="spacer">&nbsp;</td>
@@ -134,7 +1278,7 @@
                 <td>4</td>
                 <td>0</td>
                 <td class="spacer">&nbsp;</td>
-                <td data-ratio="16 16">100%</td>
+                <td data-ratio="19 19">100%</td>
             </tr>
         </tbody>
         <tfoot>
@@ -142,16 +1286,16 @@
                 <td class="name">Total</td>
                 <td class="name">&nbsp;</td>
                 <td class="spacer">&nbsp;</td>
-                <td data-ratio="49 49">100%</td>
-                <td>49</td>
+                <td data-ratio="58 58">100%</td>
+                <td>58</td>
                 <td>0</td>
                 <td>0</td>
                 <td class="spacer">&nbsp;</td>
-                <td data-ratio="22 22">100%</td>
-                <td>22</td>
+                <td data-ratio="26 26">100%</td>
+                <td>26</td>
                 <td>0</td>
                 <td class="spacer">&nbsp;</td>
-                <td data-ratio="71 71">100%</td>
+                <td data-ratio="84 84">100%</td>
             </tr>
         </tfoot>
     </table>
@@ -159,11 +1303,96 @@
         No items found using the specified filter.
     </p>
 </main>
+<section id="source-main" style="margin:2rem;overflow:auto"><h2>postfix_notation/main.py</h2><pre style="line-height:1.5"><span id="t1"><a href="#t1">  1</a>  import sys</span>
+<span id="t2"><a href="#t2">  2</a>  import operator</span>
+<span id="t3"><a href="#t3">  3</a>  from pathlib import Path</span>
+<span id="t4"><a href="#t4">  4</a>  </span>
+<span id="t5"><a href="#t5">  5</a>  def parse_args(args):</span>
+<span id="t6"><a href="#t6">  6</a>      home_dir = str(Path.home())</span>
+<span id="t7"><a href="#t7">  7</a>      for i,e in enumerate(args):</span>
+<span id="t8"><a href="#t8">  8</a>          if home_dir == e:</span>
+<span id="t9"><a href="#t9">  9</a>              args[i] = &quot;~&quot;</span>
+<span id="t10"><a href="#t10"> 10</a>  </span>
+<span id="t11"><a href="#t11"> 11</a>      expression = &quot; &quot;.join(args)</span>
+<span id="t12"><a href="#t12"> 12</a>      return expression</span>
+<span id="t13"><a href="#t13"> 13</a>  </span>
+<span id="t14"><a href="#t14"> 14</a>  def eval_expr(raw_expression):</span>
+<span id="t15"><a href="#t15"> 15</a>      stack = []</span>
+<span id="t16"><a href="#t16"> 16</a>      op = [&quot;+&quot;, &quot;-&quot;, &quot;/&quot;, &quot;*&quot;, &quot;~&quot;]</span>
+<span id="t17"><a href="#t17"> 17</a>      expression = raw_expression.replace(&quot;,&quot;, &quot; &quot;).split()</span>
+<span id="t18"><a href="#t18"> 18</a>  </span>
+<span id="t19"><a href="#t19"> 19</a>      for i in expression:</span>
+<span id="t20"><a href="#t20"> 20</a>          try:</span>
+<span id="t21"><a href="#t21"> 21</a>              number = float(i)</span>
+<span id="t22"><a href="#t22"> 22</a>          except ValueError:</span>
+<span id="t23"><a href="#t23"> 23</a>              if i not in op:</span>
+<span id="t24"><a href="#t24"> 24</a>                  print(f&quot;Неизвестный оператор: поддерживаемые операторы \&#x27;{&quot; &quot;.join(op)}\&#x27;&quot;)</span>
+<span id="t25"><a href="#t25"> 25</a>                  sys.exit(1)</span>
+<span id="t26"><a href="#t26"> 26</a>              if len(stack) &lt; 2:</span>
+<span id="t27"><a href="#t27"> 27</a>                  print(&quot;Некорректный ввод: количество операндов должно быть не менее 2&quot;)</span>
+<span id="t28"><a href="#t28"> 28</a>                  sys.exit(1)</span>
+<span id="t29"><a href="#t29"> 29</a>  </span>
+<span id="t30"><a href="#t30"> 30</a>              apply_op(stack, i)</span>
+<span id="t31"><a href="#t31"> 31</a>          else:</span>
+<span id="t32"><a href="#t32"> 32</a>              stack.append(number)</span>
+<span id="t33"><a href="#t33"> 33</a>          print(stack)</span>
+<span id="t34"><a href="#t34"> 34</a>  </span>
+<span id="t35"><a href="#t35"> 35</a>      stack_len = len(stack)</span>
+<span id="t36"><a href="#t36"> 36</a>      if stack_len == 1:</span>
+<span id="t37"><a href="#t37"> 37</a>          return stack[0]</span>
+<span id="t38"><a href="#t38"> 38</a>      elif stack_len &gt;= 2:</span>
+<span id="t39"><a href="#t39"> 39</a>          print(&quot;Отсутствие операторов: нет операций для объединения&quot;)</span>
+<span id="t40"><a href="#t40"> 40</a>          sys.exit(1)</span>
+<span id="t41"><a href="#t41"> 41</a>      else:</span>
+<span id="t42"><a href="#t42"> 42</a>          print(&quot;Ошибка стека: стек пуст, вычислять нечего&quot;)</span>
+<span id="t43"><a href="#t43"> 43</a>          sys.exit(1)</span>
+<span id="t44"><a href="#t44"> 44</a>  </span>
+<span id="t45"><a href="#t45"> 45</a>  def apply_op(stack, act):</span>
+<span id="t46"><a href="#t46"> 46</a>      y = stack.pop()</span>
+<span id="t47"><a href="#t47"> 47</a>      x = stack.pop()</span>
+<span id="t48"><a href="#t48"> 48</a>  </span>
+<span id="t49"><a href="#t49"> 49</a>      if act != &quot;~&quot;:</span>
+<span id="t50"><a href="#t50"> 50</a>          if act == &quot;/&quot; and y == 0:</span>
+<span id="t51"><a href="#t51"> 51</a>              print(&quot;Ошибка деления: деление на нуль запрещено&quot;)</span>
+<span id="t52"><a href="#t52"> 52</a>              sys.exit(1)</span>
+<span id="t53"><a href="#t53"> 53</a>  </span>
+<span id="t54"><a href="#t54"> 54</a>          stack.append(operations[act](x, y))</span>
+<span id="t55"><a href="#t55"> 55</a>      else:</span>
+<span id="t56"><a href="#t56"> 56</a>          if x != 0 and y != 0:</span>
+<span id="t57"><a href="#t57"> 57</a>              stack.append(abs(x - y))</span>
+<span id="t58"><a href="#t58"> 58</a>          else:</span>
+<span id="t59"><a href="#t59"> 59</a>              s = x + y</span>
+<span id="t60"><a href="#t60"> 60</a>              while len(stack) != 0:</span>
+<span id="t61"><a href="#t61"> 61</a>                  s+= stack.pop()</span>
+<span id="t62"><a href="#t62"> 62</a>              stack.append(s*s)</span>
+<span id="t63"><a href="#t63"> 63</a>  </span>
+<span id="t64"><a href="#t64"> 64</a>  operations = {</span>
+<span id="t65"><a href="#t65"> 65</a>      &quot;+&quot;: operator.add,</span>
+<span id="t66"><a href="#t66"> 66</a>      &quot;-&quot;: operator.sub,</span>
+<span id="t67"><a href="#t67"> 67</a>      &quot;*&quot;: operator.mul,</span>
+<span id="t68"><a href="#t68"> 68</a>      &quot;/&quot;: operator.truediv,</span>
+<span id="t69"><a href="#t69"> 69</a>  }</span>
+<span id="t70"><a href="#t70"> 70</a>  </span>
+<span id="t71"><a href="#t71"> 71</a>  </span>
+<span id="t72"><a href="#t72"> 72</a>  if __name__ == &quot;__main__&quot;:</span>
+<span id="t73"><a href="#t73"> 73</a>      args = sys.argv[1:]</span>
+<span id="t74"><a href="#t74"> 74</a>      if not args:</span>
+<span id="t75"><a href="#t75"> 75</a>          print(&quot;Ошибка: выражение не передано, передайте выражение через пробел или строкой&quot;)</span>
+<span id="t76"><a href="#t76"> 76</a>          sys.exit(1)</span>
+<span id="t77"><a href="#t77"> 77</a>      args = parse_args(args)</span>
+<span id="t78"><a href="#t78"> 78</a>  </span>
+<span id="t79"><a href="#t79"> 79</a>      # if len(args) != 2:</span>
+<span id="t80"><a href="#t80"> 80</a>      #     print(&quot;Ошибка аргумента: неверно переданный аргумент, программа ожидает выражение&quot;)</span>
+<span id="t81"><a href="#t81"> 81</a>      #     sys.exit(1)</span>
+<span id="t82"><a href="#t82"> 82</a>  </span>
+<span id="t83"><a href="#t83"> 83</a>      result = eval_expr(args)</span>
+<span id="t84"><a href="#t84"> 84</a>      print(f&quot;{args} = {result}&quot;)</span>
+<span id="t85"><a href="#t85"> 85</a>  </span></pre></section>
 <footer>
     <div class="content">
         <p>
             <a class="nav" href="https://coverage.readthedocs.io/en/7.16.2">coverage.py v7.16.2</a>,
-            created at 2026-10-16 21:39 +0800
+            created at 2026-10-21 16:19 +0800
         </p>
     </div>
     <aside class="hidden">

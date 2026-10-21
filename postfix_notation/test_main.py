@@ -5,10 +5,43 @@ from pathlib import Path
 
 import pytest
 
-from main import apply_op, eval_expr
+from main import apply_op, eval_expr, parse_args
 
 
 MAIN_FILE = Path(__file__).with_name("main.py")
+
+
+@pytest.mark.parametrize(
+    ("arguments", "expected"),
+    [
+        (["2 3 +"], "2 3 +"),
+        (["2", "3", "+"], "2 3 +"),
+        (["0 1 2 ~"], "0 1 2 ~"),
+        (["0", "1", "2", "~"], "0 1 2 ~"),
+        (
+            ["3", "0", "4", str(Path.home()), "2", str(Path.home())],
+            "3 0 4 ~ 2 ~",
+        ),
+        ([str(Path.home() / "value")], str(Path.home() / "value")),
+    ],
+    ids=[
+        "single_argument",
+        "separate_arguments",
+        "tilde_in_single_argument",
+        "literal_tilde",
+        "home_paths_are_replaced",
+        "home_subdirectory_is_not_replaced",
+    ],
+)
+def test_parse_arguments(arguments, expected):
+    # Подготовка
+    raw_arguments = arguments.copy()
+
+    # Действие
+    result = parse_args(raw_arguments)
+
+    # Проверка
+    assert result == expected
 
 
 @pytest.mark.parametrize(
@@ -269,11 +302,14 @@ def test_all_stack_states_are_printed_in_order(capsys):
 
 
 @pytest.mark.parametrize(
-    "arguments",
-    [[], ["2 3 +", "4 5 +"]],
-    ids=["no_expression", "too_many_arguments"],
+    ("arguments", "message"),
+    [
+        ([], "Ошибка: выражение не передано, передайте выражение через пробел или строкой"),
+        (["2 3 +", "4 5 +"], "Отсутствие операторов: нет операций для объединения"),
+    ],
+    ids=["no_expression", "several_values_left"],
 )
-def test_cli_rejects_wrong_argument_count(arguments):
+def test_cli_rejects_invalid_input(arguments, message):
     # Подготовка
     command = [sys.executable, str(MAIN_FILE), *arguments]
 
@@ -282,27 +318,36 @@ def test_cli_rejects_wrong_argument_count(arguments):
 
     # Проверка
     assert completed.returncode == 1
-    assert (
-        "Ошибка аргумента: неверно переданный аргумент, программа ожидает выражение"
-        in completed.stdout
-    )
+    assert message in completed.stdout
 
 
-def test_cli_prints_expression_and_result():
+@pytest.mark.parametrize(
+    ("arguments", "expected"),
+    [
+        (["2 3 +"], "2 3 + = 5.0"),
+        (["2", "3", "+"], "2 3 + = 5.0"),
+        (["3 0 4 ~ 2 ~"], "3 0 4 ~ 2 ~ = 47.0"),
+        (
+            ["3", "0", "4", str(Path.home()), "2", str(Path.home())],
+            "3 0 4 ~ 2 ~ = 47.0",
+        ),
+    ],
+    ids=["single_argument", "separate_arguments", "literal_tilde", "expanded_tilde"],
+)
+def test_cli_prints_expression_and_result(arguments, expected):
     # Подготовка
-    expression = "2 3 +"
-    command = [sys.executable, str(MAIN_FILE), expression]
+    command = [sys.executable, str(MAIN_FILE), *arguments]
 
     # Действие
     completed = subprocess.run(command, capture_output=True, text=True, check=False)
 
     # Проверка
     assert completed.returncode == 0
-    assert completed.stdout.splitlines()[-1] == "2 3 + = 5.0"
+    assert completed.stdout.splitlines()[-1] == expected
     assert completed.stderr == ""
 
 
-def test_main_block_rejects_wrong_argument_count(monkeypatch, capsys):
+def test_main_block_rejects_missing_expression(monkeypatch, capsys):
     # Подготовка
     monkeypatch.setattr(sys, "argv", [str(MAIN_FILE)])
 
@@ -314,7 +359,7 @@ def test_main_block_rejects_wrong_argument_count(monkeypatch, capsys):
     assert error.value.code == 1
     assert (
         capsys.readouterr().out.strip()
-        == "Ошибка аргумента: неверно переданный аргумент, программа ожидает выражение"
+        == "Ошибка: выражение не передано, передайте выражение через пробел или строкой"
     )
 
 
