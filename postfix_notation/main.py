@@ -13,7 +13,7 @@ def parse_args(args):
 
 def eval_expr(raw_expression):
     stack = []
-    op = ["+", "-", "/", "*", "~"]
+    op = ["+", "-", "/", "*", "~","!"]
     expression = raw_expression.replace(",", " ").split()
 
     for i in expression:
@@ -50,8 +50,10 @@ def apply_op(stack, act):
         if act == "/" and y == 0:
             print("Ошибка деления: деление на нуль запрещено")
             sys.exit(1)
-
-        stack.append(operations[act](x, y))
+        if act == "!":
+            stack.append(x ** y)
+        else:
+            stack.append(operations[act](x, y))
     else:
         if x != 0 and y != 0:
             stack.append(abs(x - y))
